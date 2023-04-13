@@ -1,7 +1,9 @@
 .t-shirt{
-
+ border: 1px solid #ccc;
+ border-radius: 5px;
 }
 .t-shirt img{
     height: 250px;
     width: 250px;
+    border-radius: 5px;
 }

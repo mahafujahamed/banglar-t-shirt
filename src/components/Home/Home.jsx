@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Tshirt from '../Tshirt/Tshirt';
 import Cart from '../Cart/Cart';
@@ -6,6 +6,12 @@ import './Home.css';
 
 const Home = () => {
     const tshirts = useLoaderData();
+    const [cart, setCart] = useState([]);
+
+    const handleAddToCart = (tshirt) => {
+
+    }
+
     return (
         <div className='home-container'>
            <div className='tshirt-container'>
@@ -13,6 +19,7 @@ const Home = () => {
             tshirts.map(tshirt => <Tshirt
             key = {tshirt._id}
             tshirt = {tshirt}
+            handleAddToCart = {handleAddToCart}
             ></Tshirt>)
            }
            </div>
